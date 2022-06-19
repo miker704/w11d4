@@ -1,6 +1,6 @@
 class Todo < ApplicationRecord
 
-    validates :title, :body, presence : true
+    validates :title, :body, presence: true
     validates :done, inclusion: {in : [true,false]}
 
     belongs_to :user, class_name: "user", foreign_key: "user_id"
